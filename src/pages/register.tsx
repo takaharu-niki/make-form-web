@@ -19,7 +19,7 @@ const Register = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordConfirmation, setPasswordConfirmation] = useState('')
-    const [errors, setErrors] = useState([])
+    const [errors, setErrors] = useState<any>([])
 
     const submitForm = event => {
         event.preventDefault()
@@ -44,7 +44,7 @@ const Register = () => {
                 <form onSubmit={submitForm}>
                     {/* Name */}
                     <div>
-                        <Label htmlFor="name">Name</Label>
+                        <Label className='' htmlFor="name">名前</Label>
 
                         <Input
                             id="name"
@@ -61,7 +61,7 @@ const Register = () => {
 
                     {/* Email Address */}
                     <div className="mt-4">
-                        <Label htmlFor="email">Email</Label>
+                        <Label className='' htmlFor="email">Email</Label>
 
                         <Input
                             id="email"
@@ -77,7 +77,7 @@ const Register = () => {
 
                     {/* Password */}
                     <div className="mt-4">
-                        <Label htmlFor="password">Password</Label>
+                        <Label className='' htmlFor="password">Password</Label>
 
                         <Input
                             id="password"
@@ -97,7 +97,7 @@ const Register = () => {
 
                     {/* Confirm Password */}
                     <div className="mt-4">
-                        <Label htmlFor="passwordConfirmation">
+                        <Label className='' htmlFor="passwordConfirmation">
                             Confirm Password
                         </Label>
 
